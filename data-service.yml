@@ -1,0 +1,19 @@
+spring:
+    datasource:
+        driverClassName: org.postgresql.Driver
+        password: dominos
+        testWhileIdle: true
+        url: jdbc:postgresql://localhost:5432/banks
+        username: postgres
+        validationQuery: SELECT 1
+    jpa:
+        hibernate:
+            ddl-auto: update
+            naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+                format_sql: false
+        show-sql: true
+server:
+  port: 8001
